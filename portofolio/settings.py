@@ -26,7 +26,7 @@ SECRET_KEY = '0AT6b5pBrPM69W4K66AWMe69dWtQ8r8j/u/k0V31'
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 
 ALLOWED_HOSTS = ['radiant-cliffs-73644.herokuapp.com','tanjanyberg.io','www.tanjanyberg.io']
