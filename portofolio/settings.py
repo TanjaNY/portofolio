@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-import django_heroku
+
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -29,7 +29,7 @@ SECRET_KEY = '0AT6b5pBrPM69W4K66AWMe69dWtQ8r8j/u/k0V31'
 DEBUG = False
 
 
-ALLOWED_HOSTS = ['tanjanyberg.io','www.tanjanyberg.io','127.0.0.1','radiant-cliffs-73644.herokuapp.com']
+ALLOWED_HOSTS = ['radiant-cliffs-73644.herokuapp.com']
 
 
 # Application definition
@@ -132,4 +132,4 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_ROOT = BASE_DIR
 MEDIA_URL = '/media/'
-django_heroku.settings(locals())
+
