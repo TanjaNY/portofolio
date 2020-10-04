@@ -26,10 +26,10 @@ SECRET_KEY = '0AT6b5pBrPM69W4K66AWMe69dWtQ8r8j/u/k0V31'
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 
-ALLOWED_HOSTS = ['tanjanyberg.io','www.tanjanyberg.io','127.0.0.1']
+ALLOWED_HOSTS = ['tanjanyberg.io','www.tanjanyberg.io','127.0.0.1','radiant-cliffs-73644.herokuapp.com']
 
 
 # Application definition
