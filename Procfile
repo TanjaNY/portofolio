@@ -1,4 +1,4 @@
 
 release:python manage.py migrate
-web: gunicorn porto.wsgi 
+web: gunicorn portofolio.wsgi --preload
 
