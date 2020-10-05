@@ -55,7 +55,7 @@ STATICFILES_LOCATION='static'
 STATICFILES_STORAGE = 'custom_storages.StaticStorage'
 
 MEDIAFILES_LOCATION='media'
-DWFAULT_FILE_STORAGE= 'custom_storages.MediaStorage'
+DEFAULT_FILE_STORAGE='custom_storages.MediaStorage'
 
 
 
