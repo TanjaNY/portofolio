@@ -26,10 +26,11 @@ SECRET_KEY = '0AT6b5pBrPM69W4K66AWMe69dWtQ8r8j/u/k0V31'
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+#DEBUG = False
+DEBUG = True
 
-
-ALLOWED_HOSTS = ['radiant-cliffs-73644.herokuapp.com','tanjanyberg.io','www.tanjanyberg.io']
+#ALLOWED_HOSTS = ['radiant-cliffs-73644.herokuapp.com','tanjanyberg.io','www.tanjanyberg.io']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -44,7 +45,7 @@ INSTALLED_APPS = [
     'jobs',
     'storages',     
 ]
-AWS_STORAGE_BUCKET_NAME='elasticbeanstalk-eu-central-1-581137949655'
+AWS_STORAGE_BUCKET_NAME='my-portofolio-bucket-statics'
 AWS_S3_REGION_NAME = 'eu-central-1'  # e.g. us-east-2
 AWS_ACCESS_KEY_ID = 'AKIAYOTUFMPLWZRPQFGX'
 AWS_SECRET_ACCESS_KEY = 'rsCV9F5wEtry8nwgLZvsqyXpSuulzyrwPwC+WnqB'
