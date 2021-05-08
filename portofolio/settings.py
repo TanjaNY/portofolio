@@ -26,11 +26,11 @@ SECRET_KEY = '0AT6b5pBrPM69W4K66AWMe69dWtQ8r8j/u/k0V31'
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-#DEBUG = True
+#DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['radiant-cliffs-73644.herokuapp.com','tanjanyberg.io','www.tanjanyberg.io']
-#ALLOWED_HOSTS = []
+#ALLOWED_HOSTS = ['radiant-cliffs-73644.herokuapp.com','tanjanyberg.io','www.tanjanyberg.io']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -47,8 +47,8 @@ INSTALLED_APPS = [
 ]
 AWS_STORAGE_BUCKET_NAME='my-portofolio-bucket-statics'
 AWS_S3_REGION_NAME = 'eu-central-1'  # e.g. us-east-2
-AWS_ACCESS_KEY_ID = 'AKIAYOTUFMPLYGO4MSVA'
-AWS_SECRET_ACCESS_KEY = 'Q38c29ba5qncZWmdaQa28HJvqpFLzFUuUfvKvKbk'
+AWS_ACCESS_KEY_ID = 'AKIAYOTUFMPL3MKD7W75'
+AWS_SECRET_ACCESS_KEY = 'LLexyqsTxy2lIXV/cuVii/xhOOFUw3WAf3HONPYC'
 AWS_CUSTOM_DOMAIN='%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 AWS_DEFAULT_ACL= None
 
@@ -144,8 +144,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+#STATIC_ROOT = BASE_DIR
 
 MEDIA_ROOT = BASE_DIR
+#MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 LOGGING = {
