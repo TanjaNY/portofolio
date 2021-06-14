@@ -26,14 +26,16 @@ SECRET_KEY = '0AT6b5pBrPM69W4K66AWMe69dWtQ8r8j/u/k0V31'
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-#DEBUG = True
+#DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['radiant-cliffs-73644.herokuapp.com','tanjanyberg.io','www.tanjanyberg.io']
-#ALLOWED_HOSTS = []
+#ALLOWED_HOSTS = ['radiant-cliffs-73644.herokuapp.com','tanjanyberg.io','www.tanjanyberg.io']
+ALLOWED_HOSTS = ['localhost','127.0.0.1']
 
-
+DEFAULT_FROM_EMAIL = 'tanja.nyberg@outlook.com'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # Application definition
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -43,9 +45,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'jobs',
-    'storages',     
-]
-AWS_STORAGE_BUCKET_NAME='my-portofolio-bucket-statics'
+    
+]   
+   
+AWS_STORAGE_BUCKET_NAME = 'my-portofolio-bucket-statics'
 AWS_S3_REGION_NAME = 'eu-central-1'  # e.g. us-east-2
 AWS_ACCESS_KEY_ID = 'AKIAYOTUFMPL3MKD7W75'
 AWS_SECRET_ACCESS_KEY = 'LLexyqsTxy2lIXV/cuVii/xhOOFUw3WAf3HONPYC'
@@ -75,7 +78,7 @@ ROOT_URLCONF = 'portofolio.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates').replace('\\','/')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -97,10 +100,10 @@ WSGI_APPLICATION = 'portofolio.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'db0nmgsdd12uu1',
-        'USER':'nnzjxiohzycgny',
-        'PASSWORD':'8ee278377e651c1a637b3ef873a6635689d71151771c7435a0c5b61378961253',
-        'HOST':'ec2-52-21-247-176.compute-1.amazonaws.com',
+        'NAME': 'portfoliodb',
+        'USER':'postgres',
+        'PASSWORD':'Tierheim2020',
+        'HOST':'localhost',
         'PORT':'5432',
     }
 }
