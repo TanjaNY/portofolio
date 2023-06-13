@@ -29,7 +29,6 @@ urlpatterns = [
     path('<int:job_id>', jobs.views.detail, name='detail'),
     path('aboutme/', jobs.views.aboutme, name='aboutme'),
     path('services/', jobs.views.services, name='services'),
-    path('myskills/', jobs.views.myskills, name='myskills'),
     path('mywork/', jobs.views.mywork, name='mywork'),
 ]
 

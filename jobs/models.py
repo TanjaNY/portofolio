@@ -10,10 +10,6 @@ class Job01(models.Model):
     summary = models.CharField(max_length=300)
     url = models.URLField()
 
-class Job02(models.Model):
-    id = models.BigAutoField(primary_key=True)
-    # the rest of your fields go here
-
 class Call(models.Model):
     name = models.CharField(max_length=200)
  #   phone = models.CharField(max_length=200)

@@ -25,9 +25,6 @@ def aboutme(request):
 def services(request):
     return render(request, 'jobs/services.html',) 
 
-def myskills(request):
-    return render(request, 'jobs/myskills.html',) 
-
 def mywork(request):
     return render(request, 'jobs/mywork.html',) 
 

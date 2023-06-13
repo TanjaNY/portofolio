@@ -23,14 +23,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 #SECRET_KEY =os.getenv('SECRET_KEY')
-SECRET_KEY = os.getenv('SECRET_KEY'),
+SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = False
-DEBUG = True
+DEBUG = False
+#DEBUG = True
 
-#ALLOWED_HOSTS = ['3.65.163.237','tanjanyberg.io','www.tanjanyberg.info','18.156.50.16']
-#ALLOWED_HOSTS = ['localhost','127.0.0.1','3.121.189.111']
-ALLOWED_HOSTS = ['*']
+
+ALLOWED_HOSTS = ['localhost','127.0.0.1','www.tanjanyberg.info']
+
 
 DEFAULT_FROM_EMAIL = 'tanja.nyberg@outlook.com'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
@@ -107,7 +107,7 @@ DATABASES = {
     'default': {
 
          'ENGINE':'django.db.backends.postgresql_psycopg2',
-         'NAME': os.getenv('DB_NAME'),
+         'NAME': 'postgres',
          'USER': os.getenv('DB_USER'),
          'PASSWORD': os.getenv('DB_PASSWORD'),
          'HOST': os.getenv('DB_HOST'),
@@ -155,9 +155,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 #STATIC_DIR =os.path.join(BASE_DIR,"static")
-STATIC_URL = 'www.tanjanyberg.io/static/'
+STATIC_URL = 'www.tanjanyberg.info/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 #STATIC_ROOT = BASE_DIR
+
 
 #if DEBUG:
  #  STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
