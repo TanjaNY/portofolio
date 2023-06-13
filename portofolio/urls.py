@@ -16,19 +16,22 @@ Including another URLconf
 import jobs.views
 from django.conf import settings
 from django.conf.urls.static import static
-from django.urls import path, include
+from django.urls import path
 from django.contrib import admin
 
 
-
 urlpatterns = [
-    path('',  jobs.views.home, name='home'),
+    #path('jobs/contact/home.html', jobs.views.home, name='home'),
+    path('', jobs.views.home, name='home'),
     path('admin/', admin.site.urls),
-    path('jobs/<int:job_id>', jobs.views.detail, name='detail'),
-    path('jobs/contact/', jobs.views.contact_view, name='contact_view'),
-  
+    path('contact/', jobs.views.contact_view, name='contact'),
+    path('port/', jobs.views.port, name='port'),
+    path('<int:job_id>', jobs.views.detail, name='detail'),
+    path('aboutme/', jobs.views.aboutme, name='aboutme'),
+    path('services/', jobs.views.services, name='services'),
+    path('myskills/', jobs.views.myskills, name='myskills'),
+    path('mywork/', jobs.views.mywork, name='mywork'),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
+#urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
